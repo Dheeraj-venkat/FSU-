@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>College of Law</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../resources/css/custom-css.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../resources/js/spike.js"></script>
+	<script type="text/javascript">	 
+	 function openChapter(titleNumbers)
+	 {
+	  var range = titleNumbers.split("-");
+	  var chapters = [];
+	  for(var i=parseInt(range[0]);i<=parseInt(range[1]);i++)
+	  {
+	   chapters.push(i);
+	  }
+	  
+	  var htmlText="";
+	  htmlText = "<table class='table table-bordered'>";
+	  $.each(chapters, function( index, value ) {
+	   htmlText+="<tr><td><a href='./chapter-6.pdf' class='chapterLink' target='_blank'>Chapter-"+value+"</a></td></tr>";
+	  });
+	  htmlText+="</table>";
+	  setTimeout(function(){$(".modal-body").html(htmlText);},300);
+	  setTimeout(function(){$("#myModal").modal('show');},500);
+	 }
+	 
+	 $('#myModal').on('shown.bs.modal', function () {
+       $('#myInput').focus()
+     });
+	</script>
+</head>
+<body>
+	<div class="container">
+	  <div class="container-fluid">
+	    <!-- Start of header -->
+	    <div class="row">
+		 <div class="col-md-6">
+		   <img src="../resources/images/fsu.png" alt="FSU Logo" class="img-responsive">
+		 </div>
+		 <div class="col-md-4">
+		   <form action="" class="form-inline" onsubmit="javascript:alert('not yet implemented');">
+		    <div class="form-group">
+			  <select name="year" id="year" class="form-control col-sm-4">
+			  </select>
+			  <input type="text" name="search" class="form-control col-sm-4" id="search" placeholder="Search Statutes" required autocomplete="off">
+			</div>
+			<button type="submit" class="btn btn-default btn-sm">Search</button>
+		   </form>
+		 </div>
+		 <div class="col-md-2">
+		   <form class="form-inline pull-right">
+		    <div class="form-group">
+			  <select name="goToYearStatute" id="goToYearStatute" class="form-control" placeholder="Search Year">
+			    <option value="">Select year</option>
+			  </select>
+			</div>
+		   </form>
+		  </div>
+		 </div>
+		 <!-- End of Header -->
+		 <!-- start of Body -->
+		 <div class="row bodyContent">
+		   <!-- start of side bar -->
+		   <div class="col-md-3">
+		     <ul class="list-group sideBarLinks">
+			  <li class="list-group-item"><a href="http://www.law.fsu.edu/library/about.html">About the Research Center</a></li>
+			  <li class="list-group-item"><a href="http://www.law.fsu.edu/library/rcservices.html">Research Center Services</a></li>
+			  <li class="list-group-item"><a href="http://www.law.fsu.edu/library/resources.html">Research Resources</a></li>
+			  <li class="list-group-item"><a href="http://www.law.fsu.edu/library/find_it_quickly_table.html">Find it Quickly</a></li>
+			 </ul>
+		   </div>
+		   <!-- end of side bar -->
+		   <!-- start of main content -->
+		   <div class="col-md-9">
+		    <h3 class="text-garnet">Florida Statutes of 1995</h3>
+		    <table class="table table-bordered contentTable">
+				<tr class="warning">
+				  <td>Title Number</td>  <td>Title</td>  <td>Chapters</td>
+				</tr>
+				<!-- Change Start from next line -->
+				<tr>
+				  <td><a name="TitleI"></a><a href="#"  onclick="openChapter('1-2')">TITLE I</a></td>
+				  <td>CONSTRUCTION OF STATUTES</td>
+				  <td>Ch.1-2</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleII"></a><a href="#"  onclick="openChapter('6-8')">TITLE II</a></td>
+				  <td>STATE ORGANIZATION</td>
+				  <td>Ch.6-8</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleIII"></a><a href="#"  onclick="openChapter('10-13')">TITLE III</a></td>
+				  <td>LEGISLATIVE BRANCH; COMMISSIONS</td>
+				  <td>Ch.10-13</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleIV"></a><a href="#"  onclick="openChapter('14-24')">TITLE IV</a></td>
+				  <td>EXECUTIVE BRANCH</td>
+				  <td>Ch.14-24</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleV"></a><a  href="#"  onclick="openChapter('25-44')">TITLE V</a></td>
+				  <td>JUDICIAL BRANCH</td>
+				  <td>Ch.25-44</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleVI"></a><a  href="#"  onclick="openChapter('45-88')">TITLE VI</a></td>
+				  <td>CIVIL PRACTICE AND PROCEDURE</td>
+				  <td>Ch.45-88</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleVII"></a><a  href="#"  onclick="openChapter('90-92')">TITLE VII</a></td>
+				  <td>EVIDENCE</td>
+				  <td>Ch.90-92</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleVIII"></a><a  href="#"  onclick="openChapter('95')">TITLE VIII</a></td>
+				  <td>LIMITATIONS</td>
+				  <td>Ch.95</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleIX"></a><a href="#"  onclick="openChapter('97-107')">TITLE IX</a></td>
+				  <td>ELECTORS AND ELECTIONS</td>
+				  <td>Ch.97-107</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleX"></a><a  href="#"  onclick="openChapter('110-122')">TITLE X</a></td>
+				  <td>PUBLIC OFFICERS, EMPLOYEES, AND RECORDS</td>
+				  <td>Ch.110-123</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXI"></a><a  href="#"  onclick="openChapter('124-164')">TITLE XI</a></td>
+				  <td>COUNTY ORGANIZATION AND INTERGOVERNMENTAL RELATIONS</td>
+				  <td>Ch.124-164</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXII"></a><a  href="#"  onclick="openChapter('165-185')">TITLE XII</a></td>
+				  <td>MUNICIPALITIES</td>
+				  <td>Ch.165-185</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXIII"></a><a  href="#"  onclick="openChapter('186-191')">TITLE XIII</a></td>
+				  <td>PLANNING AND DEVELOPMENT</td>
+				  <td>Ch.186-191</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXIV"></a><a  href="#"  onclick="openChapter('192-221')">TITLE XIV</a></td>
+				  <td>TAXATION AND FINANCE</td>
+				  <td>Ch.192-221</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXV"></a><a  href="#"  onclick="openChapter('222')">TITLE XV</a></td>
+				  <td>HOMESTEAD AND EXEMPTIONS</td>
+				  <td>Ch.222</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXVI"></a><a  href="#"  onclick="openChapter('228-246')">TITLE XVI</a></td>
+				  <td>EDUCATION</td>
+				  <td>Ch.228-246</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXVII"></a><a  href="#"  onclick="openChapter('250-252')">TITLE XVII</a></td>
+				  <td>MILITARY AFFAIRS AND RELATED MATTERS</td>
+				  <td>Ch.250-252</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXVIII"></a><a  href="#"  onclick="openChapter('253-274')">TITLE XVIII</a></td>
+				  <td>PUBLIC LANDS AND PROPERTY</td>
+				  <td>Ch.253-274</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXIX"></a><a  href="#"  onclick="openChapter('279-290')">TITLE XIX</a></td>
+				  <td>PUBLIC BUSINESS</td>
+				  <td>Ch.279-290</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXX"></a><a  href="#"  onclick="openChapter('292-296')">TITLE XX</a></td>
+				  <td>PENSIONS AND WAR VETERANS</td>
+				  <td>Ch.292-296</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXI"></a><a  href="#"  onclick="openChapter('298')">TITLE XXI</a></td>
+				  <td>DRAINAGE</td>
+				  <td>Ch.298</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXII"></a><a href="#"  onclick="openChapter('308-315')">TITLE XXII</a></td>
+				  <td>PORTS AND HARBORS</td>
+				  <td>Ch.308-315</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXIII"></a><a  href="#"  onclick="openChapter('316-325')">TITLE XXIII</a></td>
+				  <td>MOTOR VEHICLES</td>
+				  <td>Ch.316-325</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXIV"></a><a  href="#"  onclick="openChapter('326-328')">TITLE XXIV</a></td>
+				  <td>VESSELS</td>
+				  <td>Ch.326-328</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXV"></a><a  href="#"  onclick="openChapter('329-333')">TITLE XXV</a></td>
+				  <td>AVIATION</td>
+				  <td>Ch.329-333</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXVI"></a><a  href="#"  onclick="openChapter('334-349')">TITLE XXVI</a></td>
+				  <td>PUBLIC TRANSPORTATION</td>
+				  <td>Ch.334-349</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXVII"></a><a  href="#"  onclick="openChapter('350-368')">TITLE XXVII</a></td>
+				  <td>RAILROADS AND OTHER REGULATED UTILITIES</td>
+				  <td>Ch.350-368</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXVIII"></a><a  href="#"  onclick="openChapter('369-380')">TITLE XXVIII</a></td>
+				  <td>NATURAL RESOURCES; CONSERVATION, RECLAMATION, AND USE</td>
+				  <td>Ch.369-380</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXIX"></a><a  href="#"  onclick="openChapter('381-408')">TITLE XXIX</a></td>
+				  <td>PUBLIC HEALTH</td>
+				  <td>Ch.381-408</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXX"></a><a  href="#"  onclick="openChapter('409-430')">TITLE XXX</a></td>
+				  <td>SOCIAL WELFARE</td>
+				  <td>Ch.409-430</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXI"></a><a  href="#"  onclick="openChapter('435-452')">TITLE XXXI</a></td>
+				  <td>LABOR</td>
+				  <td>Ch.435-452</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXII"></a><a  href="#"  onclick="openChapter('454-493')">TITLE XXXII</a></td>
+				  <td>REGULATION OF PROFESSIONS AND OCCUPATIONS</td>
+				  <td>Ch.454-493</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXIII"></a><a  href="#"  onclick="openChapter('494-560')">TITLE XXXIII</a></td>
+				  <td>REGULATION OF TRADE, COMMERCE, INVESTMENTS,   AND SOLICITATIONS</td>
+				  <td>Ch.494-560</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXIV"></a><a  href="#"  onclick="openChapter('561-569')">TITLE XXXIV</a></td>
+				  <td>ALCOHOLIC BEVERAGES AND TOBACCO</td>
+				  <td>Ch.561-569</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXV"></a><a  href="#"  onclick="openChapter('570-604')">TITLE XXXV</a></td>
+				  <td>AGRICULTURE, HORTICULTURE, AND ANIMAL INDUSTRY</td>
+				  <td>Ch.570-604</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXVI"></a><a  href="#"  onclick="openChapter('606-623')">TITLE XXXVI</a></td>
+				  <td>BUSINESS ORGANIZATIONS</td>
+				  <td>Ch.606-623</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXVII"></a><a  href="#"  onclick="openChapter('624-651')">TITLE XXXVII</a></td>
+				  <td>INSURANCE</td>
+				  <td>Ch.624-651</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXVIII"></a><a  href="#"  onclick="openChapter('655-667')">TITLE XXXVIII</a></td>
+				  <td>BANKS AND BANKING</td>
+				  <td>Ch.655-667</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXXXIX"></a><a  href="#"  onclick="openChapter('668-688')">TITLE XXXIX</a></td>
+				  <td>COMMERCIAL RELATIONS</td>
+				  <td>Ch.668-688</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXL"></a><a  href="#"  onclick="openChapter('689-723')">TITLE XL</a></td>
+				  <td>REAL AND PERSONAL PROPERTY</td>
+				  <td>Ch.689-723</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLI"></a><a  href="#"  onclick="openChapter('725-727')">TITLE XLI</a></td>
+				  <td>STATUTE OF FRAUDS, FRAUDULENT TRANSFERS, AND GENERAL ASSIGNMENTS</td>
+				  <td>Ch.725-727</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLII"></a><a  href="#"  onclick="openChapter('731-738')">TITLE XLII</a></td>
+				  <td>ESTATES AND TRUSTS</td>
+				  <td>Ch.731-738</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLIII"></a><a  href="#"  onclick="openChapter('741-753')">TITLE XLIII</a></td>
+				  <td>DOMESTIC RELATIONS</td>
+				  <td>Ch.741-753</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLIV"></a><a  href="#"  onclick="openChapter('760-765')">TITLE XLIV</a></td>
+				  <td>CIVIL RIGHTS</td>
+				  <td>Ch.760-765</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLV"></a><a  href="#"  onclick="openChapter('766-774')">TITLE XLV</a></td>
+				  <td>TORTS</td>
+				  <td>Ch.766-774</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLVI"></a><a  href="#"  onclick="openChapter('775-896')">TITLE XLVI</a></td>
+				  <td>CRIMES</td>
+				  <td>Ch.775-896</td>
+				</tr>
+
+
+				<tr>
+				  <td><a name="TitleXLVII"></a><a  href="#"  onclick="openChapter('900-985 ')">TITLE XLVII</a></td>
+				  <td>CRIMINAL PROCEDURE AND CORRECTIONS</td>
+				  <td>Ch.900-960</td>
+				</tr>
+
+
+			<!-- changes ends above this line-->
+			</table>
+		   </div>
+		   <!-- end of main content -->
+		   <div class="clearfix"></div>
+		   <div class="col-md-12">
+		    Compiled by the Florida State University College of Law Legal Research Center with financial 
+			support from the law libraries of Ave Maria School of Law, Barry University, Florida Agricultural 
+			and Mechanical University, Florida Coastal School of Law, Florida International University, 
+			Florida State University, Nova Southeastern University, St. Thomas University, Stetson University, 
+			Thomas M. Cooley Law School, University of Florida, and University of Miami. Not for Commercial 
+			Use.
+		   </div>
+		 </div>
+		 <br>
+		 <!-- End of Body -->
+		 <!-- Start of Footer-->
+		 <div class="row footerContent">
+		   <div class="col-md-12 centered">
+		    &copy; Florida State Law. 425 W.Jefferson Street, Tallahassee, FL 32306-1601, 850-644-3405
+			<br>
+			<a href="http://www.law.fsu.edu/comments_questions.html">Comments & Questions</a> |
+			<a href="http://www.fsu.edu/misc/policy.html">Privacy Policy</a> |
+			<a href="http://www.fsu.edu/misc/copyright.html">Copyright</a>
+		   </div>
+		 </div>
+		 <br>
+		 <!-- end of Footer-->
+		</div>
+	  </div>
+	</div>
+	<!-- Start of Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title text-garnet" id="myModalLabel"><span class="glyphicon glyphicon-file"></span> Chapters</h4>
+		  </div>
+		  <div class="modal-body">
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default text-garnet" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- end of Modal -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+body{
+ background: #fff url('../images/header_bg.gif') 0 0 repeat-x;
+}
+
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+a{
+ text-decoration: none;
+}
+
+.centered{
+ align:center;
+ text-align: center;
+}
+
+.bodyContent{
+ background: #fff6ce url('http://www.law.fsu.edu/images3/bg2.gif') 0 0 repeat;
+ margin-top: 0.5em;
+ padding-top: 2em;
+ border: 1px solid #CCCC66 ;
+}
+
+.footerContent{
+ background: #fff6ce url('http://www.law.fsu.edu/images3/bg2.gif') 0 0 repeat;
+ border: 1px solid #CCCC66 ;
+}
+
+.contentTable{
+ background: #fff;
+}
+
+.chapterLink{
+ cursor: hand;
+ color:#540115;
+}
+
+.contentTable tr.warning td{
+ font-weight: bold;
+ text-align: center;
+}
+
+.contentTable tr td a{
+ color:#540115;
+}
+
+.sideBarLinks a{
+ color:#540115;
+ text-decoration: none;
+}
+
+.sideBarLinks a:hover{
+ color:#f00;
+ font-weight: bold;
+ cursor: hand;
+}
+
+.text-garnet{
+ color:#540115;
+}
